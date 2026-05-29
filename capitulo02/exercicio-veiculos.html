@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio Veículo</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input {
+      padding: 10px;
+    }
+
+    input[type="submit"] {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Revenda de Veículos</h1>
+
+  <form>
+    <p>
+      Veículo:
+      <input type="text" id="inVeiculo" required>
+    </p>
+
+    <p>
+      Preço R$:
+      <input type="number" id="inPreco" required>
+    </p>
+    <input type="submit" value="Ver promoção">
+  </form>
+
+  <h3 id="outResp1"></h3>
+  <h3 id="outResp2"></h3>
+  <h3 id="outResp3"></h3>
+
+  <script src="js/exercicio-veiculo.js"></script>
+</body>
+
+</html>
