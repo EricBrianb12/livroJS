@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio Farmácia</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input {
+      padding: 10px;
+    }
+
+    input[type="submit"] {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Farmácia JS</h1>
+
+  <form>
+    <p>
+      Medicamento:
+      <input type="text" id="inMedicamento" required>
+    </p>
+
+    <p>
+      Preço R$:
+      <input type="number" id="inPreco" min="0" required>
+    </p>
+    <input type="submit" value="Mostrar Promoção">
+  </form>
+
+  <h3 id="nomeProduto"></h3>
+  <h3 id="promocao"></h3>
+
+
+  <script src="js/exercicio-farmacia.js"></script>
+</body>
+
+</html>
