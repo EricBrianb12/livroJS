@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercicio Farmácia</title>
+  <title>Exercicio Lan house</title>
   <style>
     * {
       padding: 0;
@@ -38,28 +38,27 @@
 </head>
 
 <body>
-  <h1>Farmácia JS</h1>
+  <h1>Lan House JS</h1>
 
   <form>
     <p>
-      Medicamento:
-      <input type="text" id="inMedicamento" required>
+      Valor por 15min de uso R$:
+      <input type="number" id="inValorMinuto" min="0" step="0.01" required>
     </p>
 
     <p>
-      Preço R$:
-      <input type="number" id="inPreco" min="0" step="0.01" required>
+      Tempo de uso do cliente:
+      <input type="number" id="inTempoUso" min="0" step="0.01" required>
     </p>
-    <input type="submit" value="Mostrar Promoção">
+    <input type="submit" value="Calcular valor a pagar">
   </form>
 
   <div>
-    <h3 id="nomeProduto"></h3>
-    <h3 id="promocao"></h3>
+    <h3></h3>
   </div>
 
 
-  <script src="js/exercicio-farmacia.js"></script>
+  <script src="js/exercicio-lanshouse.js"></script>
 </body>
 
 </html>

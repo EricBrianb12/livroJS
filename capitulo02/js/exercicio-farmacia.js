@@ -1,13 +1,17 @@
-// const form = document.querySelector("form")
-// const nomeProdutoDesc = document.getElementById("nomeProduto")
-// const promocaoDesc = document.getElementById("promocao")
+const form = document.querySelector("form")
+const nomeProdutoDesc = document.getElementById("nomeProduto")
+const promocaoDesc = document.getElementById("promocao")
 
 
-// form.addEventListener("submit", (e) => {
-//   const nomeProduto = form.inProduto.value
-//   const preco = Number(form.inPreco.value)
+form.addEventListener("submit", (e) => {
+  const nomeProduto = form.inMedicamento.value
+  const preco = Number(form.inPreco.value)
 
-//   console.log(nomeProduto)
+  const promocao = Math.floor(preco * 2)
 
-//   e.preventDefault()
-// })
+  nomeProdutoDesc.innerText = `Promoção de ${nomeProduto}`
+  promocaoDesc.innerText = `Leve 2 por apenas R$: ${promocao.toFixed(2)}`
+
+
+  e.preventDefault()
+})
