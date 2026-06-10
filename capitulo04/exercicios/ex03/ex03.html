@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa parquímetro</title>
+  <link rel="stylesheet" href="ex03.css">
+</head>
+
+<body>
+
+  <img src="icone.png" alt="icone de programa">
+
+  <form>
+    <h1>Programa parquímetro</h1>
+    <p>Valor R$:
+      <input type="number" min="0" id="inValor" step="0.01" required>
+    </p>
+
+    <input type="submit" value="Confirmar deposito">
+  </form>
+
+  <h3 id="tempo"></h3>
+  <h3 id="troco"></h3>
+
+  <script src="ex03.js"></script>
+</body>
+
+</html>
