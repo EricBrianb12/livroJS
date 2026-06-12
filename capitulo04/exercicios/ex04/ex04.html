@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa parquímetro</title>
+  <link rel="stylesheet" href="ex04.css">
+</head>
+
+<body>
+
+  <img src="icone.png" alt="icone de programa">
+
+  <form>
+    <h1>Programa lados de um triângulo</h1>
+
+    <p>Lado A:
+      <input type="number" min="0" id="inLadoA" required>
+    </p>
+
+    <p>Lado B:
+      <input type="number" min="0" id="inLadoB" required>
+    </p>
+
+    <p>Lado C:
+      <input type="number" min="0" id="inLadoC" required>
+    </p>
+
+    <input type="submit" value="Verificar lados">
+  </form>
+
+  <div>
+    <h3 id="outResp"></h3>
+    <h3 id="outTipo"></h3>
+  </div>
+
+  <script src="ex04.js"></script>
+</body>
+
+</html>
