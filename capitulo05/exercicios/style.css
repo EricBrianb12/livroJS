@@ -45,6 +45,11 @@
       cursor: pointer;
     }
 
+    .resultado {
+      display: grid;
+      gap: 10px;
+    }
+
     pre {
       font-size: 1.2rem;
     }
