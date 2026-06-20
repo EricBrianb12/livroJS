@@ -15,8 +15,6 @@
       width: 600px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       gap: 20px;
     }
 
@@ -25,10 +23,13 @@
       max-width: 200px;
     }
 
+    h1 {
+      border-bottom: 1px solid #6666;
+      padding-bottom: 10px;
+    }
+
     form {
-      width: 400px;
       display: flex;
-      flex-direction: column;
       gap: 20px;
     }
 
@@ -36,36 +37,22 @@
       padding: 10px;
     }
 
-    input[type="text"],
-    input[type="number"] {
-      width: 100%;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 30px;
-    }
-
     input[type="submit"],
-    input[type="reset"] {
+    input[type="button"] {
       cursor: pointer;
+    }
+
+
+
+    .resultado {
+      display: grid;
+      gap: 10px;
     }
 
     pre {
       font-size: 1.2rem;
     }
 
-    .oculta {
-      display: none;
-    }
-
-    .exibe {
-      display: block;
-    }
-
-    .result {
-      width: 400px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+    .fonte-azul {
+      color: blue;
     }
