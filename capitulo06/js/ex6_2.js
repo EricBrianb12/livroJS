@@ -13,7 +13,7 @@ form.addEventListener("submit", (e) => {
 
   if (numero === sorteado) {
     respDica.innerText = `Parabéns! Número sorteado: ${sorteado}`
-    form.btSubmit.disable = true
+    form.btSubmit.disabled = true
     form.btNovo.className = "exibe"
   } else {
     if (erros.includes(numero)) { //se o número já existe no vetor de erros, já apostou
@@ -28,7 +28,7 @@ form.addEventListener("submit", (e) => {
       respChances.innerText = numChances
       if (numChances === 0) {
         alert("Suas chances acabaram...")
-        form.btSubmit.disable = true
+        form.btSubmit.disabled = true
         form.btNovo.className = "exibe"
         respDica.innerText = `Game Over!! Número Sorteado: ${sorteado}`
       } else {
@@ -41,4 +41,8 @@ form.addEventListener("submit", (e) => {
   console.log(sorteado)
   form.inNumero.value = ""
   form.inNumero.focus()
+})
+
+form.btNovo.addEventListener("click", () => {
+  location.reload() //recarrega a página
 })
