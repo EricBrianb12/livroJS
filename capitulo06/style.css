@@ -63,6 +63,10 @@
       display: block;
     }
 
+    #outDica {
+      font-style: italic;
+    }
+
     .result {
       width: 400px;
       display: flex;
