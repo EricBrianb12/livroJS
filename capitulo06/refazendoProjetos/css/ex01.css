@@ -1,0 +1,260 @@
+/* =========================================================
+   Consultório Médico — folha de estilo
+   Paleta calma e clínica + botões com cor semântica
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Spline+Sans+Mono:wght@400;500&display=swap');
+
+:root {
+  --clinic-bg: #e7f0f1;
+  --surface: #ffffff;
+  --ink: #15272d;
+  --muted: #5f7682;
+  --primary: #0e8585;
+  /* teal calmo — ação principal */
+  --primary-deep: #0a6a6a;
+  --accent-blue: #1e6fe0;
+  /* o "fonte-azul" do contador */
+  --urgency: #df4747;
+  /* vermelho de alerta */
+  --attend: #1f9d5b;
+  /* verde de concluir */
+  --line: #d6e3e5;
+  --shadow: 0 18px 40px -24px rgba(13, 70, 75, 0.45);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 20px;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 0%, #f3f9f9 0%, transparent 45%),
+    radial-gradient(circle at 100% 100%, #dceaec 0%, transparent 40%),
+    var(--clinic-bg);
+}
+
+main {
+  width: 100%;
+  max-width: 540px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 38px 34px 34px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* faixa de acento no topo do cartão */
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary), var(--accent-blue));
+}
+
+/* ----- Cabeçalho ----- */
+h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 1.85rem;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+/* cruz médica — assinatura discreta */
+h1::before {
+  content: "✚";
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  color: var(--surface);
+  background: var(--primary);
+  border-radius: 12px;
+  box-shadow: 0 6px 14px -6px var(--primary);
+}
+
+/* ----- Formulário ----- */
+form p {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+input[type="text"] {
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  padding: 13px 15px;
+  border: 1.5px solid var(--line);
+  border-radius: 11px;
+  background: #fafdfd;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+input[type="text"]::placeholder {
+  color: #9fb2bb;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(14, 133, 133, 0.14);
+}
+
+/* ----- Botões ----- */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buttons input {
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 11px 18px;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.18s ease,
+    color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.buttons input:active {
+  transform: translateY(1px);
+}
+
+.buttons input:focus-visible {
+  outline: 3px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+/* Adicionar = ação principal (teal preenchido) */
+#btnAdicionar {
+  flex: 1 1 auto;
+  color: #fff;
+  background: var(--primary);
+  box-shadow: 0 8px 18px -10px var(--primary);
+}
+
+#btnAdicionar:hover {
+  background: var(--primary-deep);
+}
+
+/* Urgência = alerta (vermelho, contornado) */
+#btnUrgencia {
+  color: var(--urgency);
+  background: #fdeeee;
+  border-color: #f6cccc;
+}
+
+#btnUrgencia:hover {
+  background: var(--urgency);
+  color: #fff;
+}
+
+/* Atender = concluir (verde, contornado) */
+#btnAtender {
+  color: var(--attend);
+  background: #e9f7ef;
+  border-color: #c4e8d3;
+}
+
+#btnAtender:hover {
+  background: var(--attend);
+  color: #fff;
+}
+
+/* ----- Contador "Em atendimentos" ----- */
+h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 30px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fonte-azul {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--accent-blue);
+  background: #eaf2fd;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 12px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 10px;
+}
+
+/* ----- Lista de pacientes (registro) ----- */
+pre {
+  font-family: 'Spline Sans Mono', ui-monospace, monospace;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--ink);
+  background: #f5fafa;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  min-height: 90px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+pre:empty::before {
+  content: "Nenhum paciente na fila ainda.";
+  color: #9fb2bb;
+  font-style: italic;
+}
+
+/* ----- Responsivo ----- */
+@media (max-width: 480px) {
+  main {
+    padding: 30px 22px 26px;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  .buttons input {
+    flex: 1 1 100%;
+  }
+}
+
+/* ----- Acessibilidade: respeitar quem prefere menos animação ----- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
