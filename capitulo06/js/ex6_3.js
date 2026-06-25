@@ -1,10 +1,11 @@
-const amigos =
-  [{ nome: "Ana", idade: 20 },
+const amigos = [
+  { nome: "Ana", idade: 20 },
   { nome: "Bruno", idade: 17 },
-  { nome: "Cátia", idade: 25 }]
+  { nome: "Cátia", idade: 25 },
+]
 
-const amigos2 = amigos.filter(aux => aux.idade >= 21 || aux.nome.includes("B"))
+const soma = amigos.reduce((acumulador, amigo) => acumulador + amigo.idade, 0)
+const todos = amigos.reduce((acumulador, amigo) => acumulador + amigo.nome + " ", "")
 
-for (const amigo of amigos2) {
-  console.log(`${amigo.nome} - Idade: ${amigo.idade} anos`)
-}
+console.log(`Soma: ${soma}`)
+console.log(`Todos: ${todos}`)
