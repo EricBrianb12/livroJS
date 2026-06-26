@@ -20,11 +20,6 @@
       gap: 20px;
     }
 
-    img {
-      width: 100%;
-      max-width: 200px;
-    }
-
     form {
       width: 400px;
       display: flex;
@@ -33,38 +28,12 @@
     }
 
     input {
+      width: 100%;
       padding: 10px;
     }
 
-    input[type="text"],
-    input[type="number"] {
-      width: 100%;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 30px;
-    }
-
-    input[type="submit"],
-    input[type="button"] {
-      cursor: pointer;
-    }
-
-    pre {
-      font-size: 1.2rem;
-    }
-
-    .oculta {
-      display: none;
-    }
-
-    .exibe {
-      display: block;
-    }
-
-    #outDica {
-      font-style: italic;
+    .idade input {
+      max-width: 49%;
     }
 
     .buttons {
@@ -72,15 +41,18 @@
       gap: 5px;
     }
 
-    .preco {
-      display: grid;
-      align-items: center;
-      gap: 3px;
-      grid-template-columns: 1fr 3fr 1fr;
+    input[type="submit"],
+    input[type="button"] {
+      cursor: pointer;
     }
+
 
     .buttons input[type="button"] {
       width: 100%;
+    }
+
+    pre {
+      width: 400px;
     }
 
     .result {
