@@ -49,3 +49,15 @@
     pre {
       font-size: 1.2rem;
     }
+
+    .att {
+      font-style: italic;
+      color: blue;
+    }
+
+    .resp {
+      margin-top: 40px;
+      width: 400px;
+      display: grid;
+      gap: 15px;
+    }
