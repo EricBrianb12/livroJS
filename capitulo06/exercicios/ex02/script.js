@@ -18,15 +18,30 @@ form.addEventListener("submit", (e) => {
   numeros.push(numero)
 
   resp1.innerText = "Números: " + numeros.join(", ")
+
+  resp2.innerText = ""
+
   form.inNumero.value = ""
   form.inNumero.focus()
 })
 
 
 form.btnVerificar.addEventListener("click", () => {
-  if (numeros.sort()) {
-    alert("numeros estão em ordem crescente")
-  } else {
-    alert("Atenção... Números não estão em ordem crescente")
+  if (numeros.length === 0) {
+    alert("Não há números cadastrados na lista")
+    form.inNumero.focus()
+    return
   }
+
+  let ordem = true
+
+  for (let i = 0; i < numeros.length - 1; i++) {
+    if (numeros[i] > numeros[i + 1]) {
+      ordem = false
+      break
+    }
+  }
+
+  resp2.innerText = ordem ? "Ok! Números estão em ordem crescente" : "Atenção... Números não estão em ordem crescente"
+
 })

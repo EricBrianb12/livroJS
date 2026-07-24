@@ -8,7 +8,6 @@ form.addEventListener("submit", (e) => {
   const clube = form.inClube.value
   clubes.push(clube)
 
-
   form.btnListar.dispatchEvent(new Event("click"))
 
   form.inClube.value = ""
